@@ -78,6 +78,16 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 120, 110));
 
         jPanel5.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jPanel5MouseMoved(evt);
+            }
+        });
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel5MouseExited(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setText("Trabajadores");
@@ -116,6 +126,11 @@ public class Login extends javax.swing.JFrame {
                 jPanel7MouseMoved(evt);
             }
         });
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel7MouseExited(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel6.setText("Clientes");
@@ -149,6 +164,16 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 240, 110));
 
         jPanel8.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel8.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jPanel8MouseMoved(evt);
+            }
+        });
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel8MouseExited(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel7.setText("Sobre nosotros");
@@ -207,6 +232,37 @@ public class Login extends javax.swing.JFrame {
     jPanel7.setBackground(new Color(255,255,255));
 
     }//GEN-LAST:event_jPanel7MouseMoved
+
+    private void jPanel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseExited
+            jPanel7.setBackground(new Color(102,102,102));
+
+
+    }//GEN-LAST:event_jPanel7MouseExited
+
+    private void jPanel5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseMoved
+      
+          jPanel5.setBackground(new Color(255,255,255));
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jPanel5MouseMoved
+
+    private void jPanel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseExited
+         
+            jPanel5.setBackground(new Color(102,102,102));
+
+    }//GEN-LAST:event_jPanel5MouseExited
+
+    private void jPanel8MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseMoved
+           jPanel8.setBackground(new Color(255,255,255));   
+
+
+    }//GEN-LAST:event_jPanel8MouseMoved
+
+    private void jPanel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseExited
+        // TODO add your handling code here:
+                    jPanel5.setBackground(new Color(102,102,102));
+
+    }//GEN-LAST:event_jPanel8MouseExited
 
     /**
      * @param args the command line arguments
