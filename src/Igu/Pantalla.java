@@ -45,13 +45,21 @@ public class Pantalla extends javax.swing.JFrame {
         subMenuReporteServicios = new javax.swing.JMenu();
         itemBuscarServicioXNombre = new javax.swing.JMenuItem();
         itemBuscarServicioXValor = new javax.swing.JMenuItem();
+        itemEliminarServicios1 = new javax.swing.JMenuItem();
+        itemEditarServicios1 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem16 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("..:GESTION DE SERVICIOS:..");
+        setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
+        menuUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/usuario24px.png"))); // NOI18N
         menuUsuarios.setText("Usuarios");
+        menuUsuarios.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
+        itemIniciarSesionUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemIniciarSesionUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/login24px.png"))); // NOI18N
         itemIniciarSesionUsuario.setText("Inicio de sesión...");
         itemIniciarSesionUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +68,8 @@ public class Pantalla extends javax.swing.JFrame {
         });
         menuUsuarios.add(itemIniciarSesionUsuario);
 
+        itemAgregarUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemAgregarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/add24px.png"))); // NOI18N
         itemAgregarUsuario.setText("Agregar usuario..");
         itemAgregarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +78,8 @@ public class Pantalla extends javax.swing.JFrame {
         });
         menuUsuarios.add(itemAgregarUsuario);
 
+        itemConsultarUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemConsultarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/buscar24px.png"))); // NOI18N
         itemConsultarUsuario.setText("Consultar datos..");
         itemConsultarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +88,8 @@ public class Pantalla extends javax.swing.JFrame {
         });
         menuUsuarios.add(itemConsultarUsuario);
 
+        itemEditarUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemEditarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/edit24px.png"))); // NOI18N
         itemEditarUsuario.setText("Editar mis datos...");
         itemEditarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +98,8 @@ public class Pantalla extends javax.swing.JFrame {
         });
         menuUsuarios.add(itemEditarUsuario);
 
+        itemEliminarUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemEliminarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/delete24px.png"))); // NOI18N
         itemEliminarUsuario.setText("Eliminar mis datos..");
         itemEliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,14 +108,22 @@ public class Pantalla extends javax.swing.JFrame {
         });
         menuUsuarios.add(itemEliminarUsuario);
 
+        subMenuReporteUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/report24px.png"))); // NOI18N
         subMenuReporteUsuario.setText("Reportes");
+        subMenuReporteUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        itemBuscarUsuarioXNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemBuscarUsuarioXNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/report24px.png"))); // NOI18N
         itemBuscarUsuarioXNombre.setText("Nombre...");
         subMenuReporteUsuario.add(itemBuscarUsuarioXNombre);
 
+        itemBuscarUsuarioXCorreo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemBuscarUsuarioXCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/report24px.png"))); // NOI18N
         itemBuscarUsuarioXCorreo.setText("Correo...");
         subMenuReporteUsuario.add(itemBuscarUsuarioXCorreo);
 
+        itemBuscarUsuarioXTelefono.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemBuscarUsuarioXTelefono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/report24px.png"))); // NOI18N
         itemBuscarUsuarioXTelefono.setText("Telefono...");
         subMenuReporteUsuario.add(itemBuscarUsuarioXTelefono);
 
@@ -108,7 +132,9 @@ public class Pantalla extends javax.swing.JFrame {
         barramenu.add(menuUsuarios);
 
         MenuServicios.setText("Servicios");
+        MenuServicios.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
+        itemAgregarServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         itemAgregarServicios.setText("Agregar servicios..");
         itemAgregarServicios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +143,7 @@ public class Pantalla extends javax.swing.JFrame {
         });
         MenuServicios.add(itemAgregarServicios);
 
+        itemConsultarServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         itemConsultarServicios.setText("Consultar servicios..");
         itemConsultarServicios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,6 +152,7 @@ public class Pantalla extends javax.swing.JFrame {
         });
         MenuServicios.add(itemConsultarServicios);
 
+        itemEditarServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         itemEditarServicios.setText("Editar servicios..");
         itemEditarServicios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +161,7 @@ public class Pantalla extends javax.swing.JFrame {
         });
         MenuServicios.add(itemEditarServicios);
 
+        itemEliminarServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         itemEliminarServicios.setText("Eliminar servicios...");
         itemEliminarServicios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,19 +171,42 @@ public class Pantalla extends javax.swing.JFrame {
         MenuServicios.add(itemEliminarServicios);
 
         subMenuReporteServicios.setText("Reportes");
+        subMenuReporteServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        itemBuscarServicioXNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         itemBuscarServicioXNombre.setText("Nombre...");
         subMenuReporteServicios.add(itemBuscarServicioXNombre);
 
+        itemBuscarServicioXValor.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         itemBuscarServicioXValor.setText("Valor...");
         subMenuReporteServicios.add(itemBuscarServicioXValor);
 
         MenuServicios.add(subMenuReporteServicios);
 
+        itemEliminarServicios1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemEliminarServicios1.setText("Eliminar servicios...");
+        itemEliminarServicios1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemEliminarServicios1ActionPerformed(evt);
+            }
+        });
+        MenuServicios.add(itemEliminarServicios1);
+
+        itemEditarServicios1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemEditarServicios1.setText("Editar servicios..");
+        itemEditarServicios1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemEditarServicios1ActionPerformed(evt);
+            }
+        });
+        MenuServicios.add(itemEditarServicios1);
+
         barramenu.add(MenuServicios);
 
         jMenu3.setText("Ayuda");
+        jMenu3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
+        jMenuItem16.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem16.setText("Acerca de...");
         jMenu3.add(jMenuItem16);
 
@@ -166,11 +218,11 @@ public class Pantalla extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 604, Short.MAX_VALUE)
+            .addGap(0, 740, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 396, Short.MAX_VALUE)
+            .addGap(0, 438, Short.MAX_VALUE)
         );
 
         pack();
@@ -181,7 +233,9 @@ public class Pantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_itemIniciarSesionUsuarioActionPerformed
 
     private void itemAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAgregarUsuarioActionPerformed
-        // TODO add your handling code here:
+    PantallaUsuarios pantalla = new PantallaUsuarios (this,true);   
+    pantalla.setLocationRelativeTo(this);
+    pantalla.setVisible(true);
     }//GEN-LAST:event_itemAgregarUsuarioActionPerformed
 
     private void itemConsultarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarUsuarioActionPerformed
@@ -211,6 +265,14 @@ public class Pantalla extends javax.swing.JFrame {
     private void itemEliminarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarServiciosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_itemEliminarServiciosActionPerformed
+
+    private void itemEliminarServicios1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarServicios1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemEliminarServicios1ActionPerformed
+
+    private void itemEditarServicios1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarServicios1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemEditarServicios1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,8 +322,10 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemConsultarServicios;
     private javax.swing.JMenuItem itemConsultarUsuario;
     private javax.swing.JMenuItem itemEditarServicios;
+    private javax.swing.JMenuItem itemEditarServicios1;
     private javax.swing.JMenuItem itemEditarUsuario;
     private javax.swing.JMenuItem itemEliminarServicios;
+    private javax.swing.JMenuItem itemEliminarServicios1;
     private javax.swing.JMenuItem itemEliminarUsuario;
     private javax.swing.JMenuItem itemIniciarSesionUsuario;
     private javax.swing.JMenu jMenu3;
