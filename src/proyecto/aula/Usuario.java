@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyecto.aula;
-
+import java.util.*;
 import java.util.ArrayList;
 
 /**
@@ -17,5 +17,6 @@ public class Usuario {
     public String email;
     public String telefono;
     public ArrayList<Servicio>listadeservicios;
+    public static HashMap<String,Usuario> usuarioBD;
     
 }
