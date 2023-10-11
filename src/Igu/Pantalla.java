@@ -239,7 +239,9 @@ public class Pantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_itemAgregarUsuarioActionPerformed
 
     private void itemConsultarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarUsuarioActionPerformed
-        // TODO add your handling code here:
+        itemAgregarUsuarioActionPerformed(evt);
+        
+        
     }//GEN-LAST:event_itemConsultarUsuarioActionPerformed
 
     private void itemEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarUsuarioActionPerformed

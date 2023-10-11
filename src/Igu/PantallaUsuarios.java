@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
 package Igu;
+import java.util.*;
+import javax.swing.JOptionPane;
+import proyecto.aula.Usuario;
 
 /**
  *
@@ -35,7 +38,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         campoCedula = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        campoNomebre = new javax.swing.JTextField();
+        campoNombre = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         campoEmail = new javax.swing.JTextField();
@@ -45,9 +48,14 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         botonCancelar = new javax.swing.JButton();
         botonGuardar = new javax.swing.JButton();
-        botonGuardar1 = new javax.swing.JButton();
+        botonBuscar = new javax.swing.JButton();
         botonEditar = new javax.swing.JButton();
         botonEliminar = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
 
@@ -117,7 +125,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(campoTelefono)
-                    .addComponent(campoNomebre)
+                    .addComponent(campoNombre)
                     .addComponent(campoCedula)
                     .addComponent(campoEmail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
                     .addComponent(campoClave))
@@ -137,7 +145,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoNomebre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,6 +161,11 @@ public class PantallaUsuarios extends javax.swing.JDialog {
 
         botonCancelar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/cancelar48px.png"))); // NOI18N
+        botonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCancelarActionPerformed(evt);
+            }
+        });
 
         botonGuardar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/guardar48px.png.png"))); // NOI18N
@@ -162,11 +175,11 @@ public class PantallaUsuarios extends javax.swing.JDialog {
             }
         });
 
-        botonGuardar1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        botonGuardar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/buscar24px.png"))); // NOI18N
-        botonGuardar1.addActionListener(new java.awt.event.ActionListener() {
+        botonBuscar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/buscar24px.png"))); // NOI18N
+        botonBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonGuardar1ActionPerformed(evt);
+                botonBuscarActionPerformed(evt);
             }
         });
 
@@ -186,6 +199,16 @@ public class PantallaUsuarios extends javax.swing.JDialog {
             }
         });
 
+        jLabel10.setText("Guardar");
+
+        jLabel11.setText("Buscar");
+
+        jLabel12.setText("Editar");
+
+        jLabel13.setText("Eliminar");
+
+        jLabel14.setText("Salir");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -196,24 +219,34 @@ public class PantallaUsuarios extends javax.swing.JDialog {
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(botonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(botonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(botonGuardar1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                        .addComponent(botonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(81, 81, 81))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80))))
+                        .addGap(80, 80, 80))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10))
+                        .addGap(81, 81, 81))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,14 +257,25 @@ public class PantallaUsuarios extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(botonCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonGuardar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 64, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(botonGuardar)
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel10))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonCancelar)
+                            .addComponent(botonEliminar)
+                            .addComponent(botonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel11))))
+                .addGap(0, 28, Short.MAX_VALUE))
         );
 
         pack();
@@ -246,16 +290,97 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     }//GEN-LAST:event_campoTelefonoActionPerformed
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
-        // TODO add your handling code here:
+      //recuperar los datos ingresados en los campos de el formulario
+      
+      String cedula = campoCedula.getText();
+      char[] clave = campoClave.getPassword();
+      String nombre = campoNombre.getText();
+      String email = campoEmail.getText();
+      String telefono = campoTelefono.getText();
+        //creamos un objeto variable de tipo usuario
+        
+        Usuario user = new Usuario();
+        user.cedula = cedula;
+        String clave2 = String.valueOf(clave);
+        user.clave = clave2;
+        user.nombre = nombre;
+        user.email = email;
+        user.telefono = telefono;
+        
+        //validar si ya MAP existe
+        
+        if(Usuario.usuarioBD == null){
+            Usuario.usuarioBD = new HashMap<String, Usuario>();
+      
+        }
+        //validar si MAP ya tiene el usuario guardado
+        
+        if(Usuario.usuarioBD.containsKey(cedula)){
+            String msj = "Ya existe un usuario con este documento\n" + cedula;
+            JOptionPane.showMessageDialog(this, msj);
+       
+       }else{
+            //obtenemos el numero de usuarios en MAP en caso de que ya existan
+          Usuario.usuarioBD.put(cedula, user);  
+        }
+       
+        //guardamos el usuario en MAP
+        
+        Usuario.usuarioBD.put(clave2, user);
+        int contarUsuarios = Usuario.usuarioBD.size();
+        String msj = "Este usuario fue guardado con exito\n"
+                + "Existen\n" + contarUsuarios + "\nUsuarios";
+                    JOptionPane.showMessageDialog(this, msj);
+                    limpiarCampos();
+
     }//GEN-LAST:event_botonGuardarActionPerformed
 
+    public void limpiarCampos(){
+    
+        campoCedula.setText("");
+        campoNombre.setText("");
+        campoClave.setText("");
+        campoEmail.setText("");
+        campoTelefono.setText("");
+    }
+    
     private void campoCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCedulaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoCedulaActionPerformed
 
-    private void botonGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonGuardar1ActionPerformed
+    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+           //Recuperar la cedula de MAP
+           
+           String cedula = campoCedula.getText();
+           
+           //verioficamos si MAP esta vacio
+           
+           if(Usuario.usuarioBD == null || Usuario.usuarioBD.isEmpty()){
+              String msj = "No existen usuarios en nuestro sistema";
+              JOptionPane.showMessageDialog(this, msj);
+            
+           }else{
+           // buscamos el usuario en MAP a partir de la cedula o numero de documento
+           if(Usuario.usuarioBD.containsKey(cedula)){
+               Usuario user = Usuario.usuarioBD.get(cedula);
+               campoNombre.setText(user.cedula);
+               campoNombre.setText(user.nombre);
+               campoClave.setText(user.cedula);
+               campoEmail.setText(user.email);
+               campoTelefono.setText(user.telefono);
+               
+               
+           }else{
+           String msj = "No existe un usuario con ese documento";
+                         JOptionPane.showMessageDialog(this, msj);
+                         limpiarCampos();
+           
+           }
+           
+           
+           }
+        
+    }//GEN-LAST:event_botonBuscarActionPerformed
 
     private void botonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarActionPerformed
         // TODO add your handling code here:
@@ -265,6 +390,18 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonEliminarActionPerformed
 
+    private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
+        
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Desea cerrar?"
+                , "OJO - CONFIRMAR", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if(opcion == JOptionPane.YES_OPTION){
+            this.dispose();
+        }
+        
+    }//GEN-LAST:event_botonCancelarActionPerformed
+//(this,"¿Desea cerrar?"int opcion = JOptionPane.showConfirmDialog(this,"¿Desea cerrar?"
+               // "OJO - CONFIRMAR", JOptionpane.);
+                
     /**
      * @param args the command line arguments
      */
@@ -308,17 +445,22 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonBuscar;
     private javax.swing.JButton botonCancelar;
     private javax.swing.JButton botonEditar;
     private javax.swing.JButton botonEliminar;
     private javax.swing.JButton botonGuardar;
-    private javax.swing.JButton botonGuardar1;
     private javax.swing.JTextField campoCedula;
     private javax.swing.JPasswordField campoClave;
     private javax.swing.JTextField campoEmail;
-    private javax.swing.JTextField campoNomebre;
+    private javax.swing.JTextField campoNombre;
     private javax.swing.JTextField campoTelefono;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
