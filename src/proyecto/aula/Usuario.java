@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Usuario
  */
 public class Usuario {
-      public String cedula;
+    public String cedula;
     public String clave;
     public String nombre;
     public String email;

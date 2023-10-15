@@ -12,7 +12,7 @@ import proyecto.aula.Usuario;
  * @author Usuario
  */
 public class PantallaUsuarios extends javax.swing.JDialog {
-
+        Usuario user;
     /**
      * Creates new form PantallaUsuarios
      */
@@ -185,6 +185,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
 
         botonEditar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/edit24px.png"))); // NOI18N
+        botonEditar.setEnabled(false);
         botonEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonEditarActionPerformed(evt);
@@ -193,6 +194,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
 
         botonEliminar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/delete-file-icon.png"))); // NOI18N
+        botonEliminar.setEnabled(false);
         botonEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonEliminarActionPerformed(evt);
@@ -290,7 +292,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     }//GEN-LAST:event_campoTelefonoActionPerformed
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
-      //recuperar los datos ingresados en los campos de el formulario
+       //recuperar los datos ingresados en los campos de el formulario
       
       String cedula = campoCedula.getText();
       char[] clave = campoClave.getPassword();
@@ -302,7 +304,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         Usuario user = new Usuario();
         user.cedula = cedula;
         String clave2 = String.valueOf(clave);
-        user.clave = clave2;
+        user.cedula = clave2;
         user.nombre = nombre;
         user.email = email;
         user.telefono = telefono;
@@ -321,17 +323,19 @@ public class PantallaUsuarios extends javax.swing.JDialog {
        
        }else{
             //obtenemos el numero de usuarios en MAP en caso de que ya existan
-          Usuario.usuarioBD.put(cedula, user);  
+          Usuario.usuarioBD.put(clave2, user);
+        int contarUsuarios = Usuario.usuarioBD.size();
+        String msj = "Este usuario fue guardado con exito\n"
+                + "Existen " + contarUsuarios + " Usuarios";
+                    JOptionPane.showMessageDialog(this, msj);
+                    limpiarCampos();
+   
+            
         }
        
         //guardamos el usuario en MAP
         
-        Usuario.usuarioBD.put(clave2, user);
-        int contarUsuarios = Usuario.usuarioBD.size();
-        String msj = "Este usuario fue guardado con exito\n"
-                + "Existen\n" + contarUsuarios + "\nUsuarios";
-                    JOptionPane.showMessageDialog(this, msj);
-                    limpiarCampos();
+        
 
     }//GEN-LAST:event_botonGuardarActionPerformed
 
@@ -342,6 +346,8 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         campoClave.setText("");
         campoEmail.setText("");
         campoTelefono.setText("");
+        botonEditar.setEnabled(false);
+        botonEliminar.setEnabled(false);
     }
     
     private void campoCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCedulaActionPerformed
@@ -349,7 +355,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     }//GEN-LAST:event_campoCedulaActionPerformed
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
-           //Recuperar la cedula de MAP
+         //Recuperar la cedula de MAP
            
            String cedula = campoCedula.getText();
            
@@ -362,12 +368,14 @@ public class PantallaUsuarios extends javax.swing.JDialog {
            }else{
            // buscamos el usuario en MAP a partir de la cedula o numero de documento
            if(Usuario.usuarioBD.containsKey(cedula)){
-               Usuario user = Usuario.usuarioBD.get(cedula);
+               user = Usuario.usuarioBD.get(cedula);
                campoNombre.setText(user.cedula);
                campoNombre.setText(user.nombre);
                campoClave.setText(user.cedula);
                campoEmail.setText(user.email);
                campoTelefono.setText(user.telefono);
+               botonEditar.setEnabled(true);
+               botonEliminar.setEnabled(true);
                
                
            }else{
@@ -383,11 +391,67 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     }//GEN-LAST:event_botonBuscarActionPerformed
 
     private void botonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarActionPerformed
-        // TODO add your handling code here:
+        
+        if (campoCedula.getText()== null ||campoCedula.getText().isEmpty() ){
+                String msj = "Para editar primero debe buscar un usuario";
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos();
+                return; 
+        }
+            if(campoCedula.getText().equals(this.user.cedula)!= true){
+            String msj = "La cedula no coincide con la cedula del Usuario  consultado previamente";
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos();
+                return; 
+            }
+            
+           //Obtenemos el usuario desde el diccionario a partir de la cedula
+            Usuario u = Usuario.usuarioBD.get(campoCedula.getText());
+            //Obtenemos los nuevos datos ingresados desde ele formulario
+            char[] clave = campoClave.getPassword();
+            String nombre = campoNombre.getText();
+            String email = campoEmail.getText();
+            String telefono = campoTelefono.getText();
+            //cambio de datos del usuario por datos ingresados en el formulario
+            u.cedula = String.valueOf(clave);
+            u.nombre = nombre;
+            u.email = email;
+            u.telefono = telefono;
+            //Guradamos usuario con los nuevos datos
+            Usuario.usuarioBD.put(u.cedula, u);
+            //Mostramos mensaje
+             String msj = "Usuario modificado con exito";
+                JOptionPane.showMessageDialog(this, msj);
+            
+            
+            
     }//GEN-LAST:event_botonEditarActionPerformed
 
     private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
-        // TODO add your handling code here:
+        //validamos que el campo cedula tenga algun dato
+        if (campoCedula.getText()== null ||campoCedula.getText().isEmpty() ){
+                String msj = "Para editar primero debe buscar un usuario";
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos();
+                return; 
+        }
+        //validar que la cedula en el formulario coincida con la cedula del 
+        //usuario consultado previamente
+            if(campoCedula.getText().equals(this.user.cedula)!= true){
+            String msj = "La cedula no coincide con la cedula del Usuario  consultado previamente";
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos();
+                return; 
+            }
+            String msj = "¿Seguro que desea eliminar este usuario?";
+            int respuesta = JOptionPane.showConfirmDialog(this, msj, "CONFIRMAR"
+            , JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (respuesta == JOptionPane.YES_NO_OPTION){
+                Usuario.usuarioBD.remove(this.user.cedula);
+                int total = Usuario. usuarioBD.size();
+                String msj2 = "Usuario eliminado con exito\nTOTAL: "+total;
+                JOptionPane.showMessageDialog(this, msj2);
+            }
     }//GEN-LAST:event_botonEliminarActionPerformed
 
     private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
