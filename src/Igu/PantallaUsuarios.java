@@ -368,7 +368,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
            }else{
            // buscamos el usuario en MAP a partir de la cedula o numero de documento
            if(Usuario.usuarioBD.containsKey(cedula)){
-               user = Usuario.usuarioBD.get(cedula);
+               Usuario user = Usuario.usuarioBD.get(cedula);
                campoNombre.setText(user.cedula);
                campoNombre.setText(user.nombre);
                campoClave.setText(user.cedula);
