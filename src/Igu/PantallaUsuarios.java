@@ -321,9 +321,10 @@ public class PantallaUsuarios extends javax.swing.JDialog {
             String msj = "Ya existe un usuario con este documento\n" + cedula;
             JOptionPane.showMessageDialog(this, msj);
        
-       }else{
+       }
+        else{
             //obtenemos el numero de usuarios en MAP en caso de que ya existan
-          Usuario.usuarioBD.put(clave2, user);
+          Usuario.usuarioBD.put(cedula, user);
         int contarUsuarios = Usuario.usuarioBD.size();
         String msj = "Este usuario fue guardado con exito\n"
                 + "Existen " + contarUsuarios + " Usuarios";
@@ -368,7 +369,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
            }else{
            // buscamos el usuario en MAP a partir de la cedula o numero de documento
            if(Usuario.usuarioBD.containsKey(cedula)){
-               Usuario user = Usuario.usuarioBD.get(cedula);
+               user = Usuario.usuarioBD.get(cedula);
                campoNombre.setText(user.cedula);
                campoNombre.setText(user.nombre);
                campoClave.setText(user.cedula);
@@ -391,67 +392,58 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     }//GEN-LAST:event_botonBuscarActionPerformed
 
     private void botonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarActionPerformed
-        
-        if (campoCedula.getText()== null ||campoCedula.getText().isEmpty() ){
-                String msj = "Para editar primero debe buscar un usuario";
-                JOptionPane.showMessageDialog(this, msj);
-                limpiarCampos();
-                return; 
+        //validamos que el campo cedula tenga algun dato
+        if(campoCedula.getText() == null || campoCedula.getText().isEmpty() ){
+            String msj = "Para editar primero debe buscar un usuario";
+            JOptionPane.showMessageDialog(this, msj);
+            limpiarCampos();
+            return;
         }
-            if(campoCedula.getText().equals(this.user.cedula)!= true){
-            String msj = "La cedula no coincide con la cedula del Usuario  consultado previamente";
-                JOptionPane.showMessageDialog(this, msj);
-                limpiarCampos();
-                return; 
-            }
+        
+        
+        //Obtenemos el usuario desde el diccionario apartir de la cedula 
+        Usuario u = Usuario.usuarioBD.get(campoCedula.getText());
+        //Obtenemos los nuevos datos ingresados desde el formulario
+        char[] clave = campoClave.getPassword();
+        String nombre = campoNombre.getText();
+        String email = campoEmail.getText();
+        String telefono = campoTelefono.getText();
+         //cambiarle los datos al usuario por los neuvos datos del formulario
+         u.cedula = String.valueOf(clave);
+         u.nombre = nombre;
+         u.email = email;
+         u.telefono = telefono;
+         //Guardamos el usuario con los nuevos datos
+         Usuario.usuarioBD.put (u.cedula, u);
+         //Mostramos mensaje
+         String msj = "Usuario modificado con Exito";
+            JOptionPane.showMessageDialog(this, msj);
             
-           //Obtenemos el usuario desde el diccionario a partir de la cedula
-            Usuario u = Usuario.usuarioBD.get(campoCedula.getText());
-            //Obtenemos los nuevos datos ingresados desde ele formulario
-            char[] clave = campoClave.getPassword();
-            String nombre = campoNombre.getText();
-            String email = campoEmail.getText();
-            String telefono = campoTelefono.getText();
-            //cambio de datos del usuario por datos ingresados en el formulario
-            u.cedula = String.valueOf(clave);
-            u.nombre = nombre;
-            u.email = email;
-            u.telefono = telefono;
-            //Guradamos usuario con los nuevos datos
-            Usuario.usuarioBD.put(u.cedula, u);
-            //Mostramos mensaje
-             String msj = "Usuario modificado con exito";
-                JOptionPane.showMessageDialog(this, msj);
-            
+        
             
             
     }//GEN-LAST:event_botonEditarActionPerformed
 
     private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
         //validamos que el campo cedula tenga algun dato
-        if (campoCedula.getText()== null ||campoCedula.getText().isEmpty() ){
-                String msj = "Para editar primero debe buscar un usuario";
-                JOptionPane.showMessageDialog(this, msj);
-                limpiarCampos();
-                return; 
+       if(campoCedula.getText() == null || campoCedula.getText().isEmpty() ){
+            String msj = "Para editar primero debe buscar un usuario";
+            JOptionPane.showMessageDialog(this, msj);
+            limpiarCampos();
+            return;
         }
-        //validar que la cedula en el formulario coincida con la cedula del 
-        //usuario consultado previamente
-            if(campoCedula.getText().equals(this.user.cedula)!= true){
-            String msj = "La cedula no coincide con la cedula del Usuario  consultado previamente";
-                JOptionPane.showMessageDialog(this, msj);
-                limpiarCampos();
-                return; 
-            }
-            String msj = "¿Seguro que desea eliminar este usuario?";
-            int respuesta = JOptionPane.showConfirmDialog(this, msj, "CONFIRMAR"
-            , JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-            if (respuesta == JOptionPane.YES_NO_OPTION){
-                Usuario.usuarioBD.remove(this.user.cedula);
-                int total = Usuario. usuarioBD.size();
-                String msj2 = "Usuario eliminado con exito\nTOTAL: "+total;
-                JOptionPane.showMessageDialog(this, msj2);
-            }
+        //validar que la cedula en el formulario coincida con la cedula del usuario consultado previamente
+        
+        
+        String msj = "¿Seguro que desea eliminar este usuario?";
+        int respuesta = JOptionPane.showConfirmDialog(this, msj, "CONFIRMAR"
+        , JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if(respuesta == JOptionPane.YES_NO_OPTION){
+            Usuario.usuarioBD.remove(this.user.cedula);
+            int total = Usuario.usuarioBD.size();
+            String mjs2 = "Usuario eliminado con exito\nTOTAL: "+total;
+            JOptionPane.showMessageDialog(this , mjs2);
+        }
     }//GEN-LAST:event_botonEliminarActionPerformed
 
     private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
