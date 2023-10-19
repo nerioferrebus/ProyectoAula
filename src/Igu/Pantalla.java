@@ -33,10 +33,6 @@ public class Pantalla extends javax.swing.JFrame {
         itemConsultarUsuario = new javax.swing.JMenuItem();
         itemEditarUsuario = new javax.swing.JMenuItem();
         itemEliminarUsuario = new javax.swing.JMenuItem();
-        subMenuReporteUsuario = new javax.swing.JMenu();
-        itemBuscarUsuarioXNombre = new javax.swing.JMenuItem();
-        itemBuscarUsuarioXCorreo = new javax.swing.JMenuItem();
-        itemBuscarUsuarioXTelefono = new javax.swing.JMenuItem();
         MenuServicios = new javax.swing.JMenu();
         itemAgregarServicios = new javax.swing.JMenuItem();
         itemConsultarServicios = new javax.swing.JMenuItem();
@@ -107,27 +103,6 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         menuUsuarios.add(itemEliminarUsuario);
-
-        subMenuReporteUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/report24px.png"))); // NOI18N
-        subMenuReporteUsuario.setText("Reportes");
-        subMenuReporteUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        itemBuscarUsuarioXNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemBuscarUsuarioXNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/report24px.png"))); // NOI18N
-        itemBuscarUsuarioXNombre.setText("Nombre...");
-        subMenuReporteUsuario.add(itemBuscarUsuarioXNombre);
-
-        itemBuscarUsuarioXCorreo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemBuscarUsuarioXCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/report24px.png"))); // NOI18N
-        itemBuscarUsuarioXCorreo.setText("Correo...");
-        subMenuReporteUsuario.add(itemBuscarUsuarioXCorreo);
-
-        itemBuscarUsuarioXTelefono.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemBuscarUsuarioXTelefono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/report24px.png"))); // NOI18N
-        itemBuscarUsuarioXTelefono.setText("Telefono...");
-        subMenuReporteUsuario.add(itemBuscarUsuarioXTelefono);
-
-        menuUsuarios.add(subMenuReporteUsuario);
 
         barramenu.add(menuUsuarios);
 
@@ -239,9 +214,11 @@ public class Pantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_itemAgregarUsuarioActionPerformed
 
     private void itemConsultarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarUsuarioActionPerformed
-        itemAgregarUsuarioActionPerformed(evt);
-        
-        
+
+       PantallaBusqueda pantalla2 = new PantallaBusqueda();
+       pantalla2.setLocationRelativeTo(this);
+       pantalla2.setVisible(true);
+          
     }//GEN-LAST:event_itemConsultarUsuarioActionPerformed
 
     private void itemEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarUsuarioActionPerformed
@@ -318,9 +295,6 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemAgregarUsuario;
     private javax.swing.JMenuItem itemBuscarServicioXNombre;
     private javax.swing.JMenuItem itemBuscarServicioXValor;
-    private javax.swing.JMenuItem itemBuscarUsuarioXCorreo;
-    private javax.swing.JMenuItem itemBuscarUsuarioXNombre;
-    private javax.swing.JMenuItem itemBuscarUsuarioXTelefono;
     private javax.swing.JMenuItem itemConsultarServicios;
     private javax.swing.JMenuItem itemConsultarUsuario;
     private javax.swing.JMenuItem itemEditarServicios;
@@ -334,6 +308,5 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenu menuUsuarios;
     private javax.swing.JMenu subMenuReporteServicios;
-    private javax.swing.JMenu subMenuReporteUsuario;
     // End of variables declaration//GEN-END:variables
 }
