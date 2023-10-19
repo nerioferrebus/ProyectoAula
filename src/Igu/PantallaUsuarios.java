@@ -72,6 +72,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jLabel1.setText("Formulario para nuevos usuarios");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 255), 2, true), "Datos del Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 18), new java.awt.Color(51, 51, 255))); // NOI18N
+        jPanel1.setForeground(new java.awt.Color(0, 102, 102));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setText("CEDULA");
@@ -347,49 +348,12 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         campoClave.setText("");
         campoEmail.setText("");
         campoTelefono.setText("");
-        botonEditar.setEnabled(false);
-        botonEliminar.setEnabled(false);
+        
     }
     
     private void campoCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCedulaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoCedulaActionPerformed
-
-    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
-         //Recuperar la cedula de MAP
-           
-           String cedula = campoCedula.getText();
-           
-           //verioficamos si MAP esta vacio
-           
-           if(Usuario.usuarioBD == null || Usuario.usuarioBD.isEmpty()){
-              String msj = "No existen usuarios en nuestro sistema";
-              JOptionPane.showMessageDialog(this, msj);
-            
-           }else{
-           // buscamos el usuario en MAP a partir de la cedula o numero de documento
-           if(Usuario.usuarioBD.containsKey(cedula)){
-               user = Usuario.usuarioBD.get(cedula);
-               campoNombre.setText(user.cedula);
-               campoNombre.setText(user.nombre);
-               campoClave.setText(user.cedula);
-               campoEmail.setText(user.email);
-               campoTelefono.setText(user.telefono);
-               botonEditar.setEnabled(true);
-               botonEliminar.setEnabled(true);
-               
-               
-           }else{
-           String msj = "No existe un usuario con ese documento";
-                         JOptionPane.showMessageDialog(this, msj);
-                         limpiarCampos();
-           
-           }
-           
-           
-           }
-        
-    }//GEN-LAST:event_botonBuscarActionPerformed
 
     private void botonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarActionPerformed
         //validamos que el campo cedula tenga algun dato
@@ -455,6 +419,40 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         }
         
     }//GEN-LAST:event_botonCancelarActionPerformed
+
+    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+        //Recuperar la cedula de MAP
+
+        String cedula = campoCedula.getText();
+
+        //verioficamos si MAP esta vacio
+
+        if(Usuario.usuarioBD == null || Usuario.usuarioBD.isEmpty()){
+            String msj = "No existen usuarios en nuestro sistema";
+            JOptionPane.showMessageDialog(this, msj);
+
+        }else{
+            // buscamos el usuario en MAP a partir de la cedula o numero de documento
+            if(Usuario.usuarioBD.containsKey(cedula)){
+                user = Usuario.usuarioBD.get(cedula);
+                campoNombre.setText(user.cedula);
+                campoNombre.setText(user.nombre);
+                campoClave.setText(user.cedula);
+                campoEmail.setText(user.email);
+                campoTelefono.setText(user.telefono);
+                botonEditar.setEnabled(true);
+                botonEliminar.setEnabled(true);
+
+            }else{
+                String msj = "No existe un usuario con ese documento";
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos();
+
+            }
+
+        }
+
+    }//GEN-LAST:event_botonBuscarActionPerformed
 //(this,"¿Desea cerrar?"int opcion = JOptionPane.showConfirmDialog(this,"¿Desea cerrar?"
                // "OJO - CONFIRMAR", JOptionpane.);
                 
