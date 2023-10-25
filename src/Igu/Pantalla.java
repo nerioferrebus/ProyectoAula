@@ -4,6 +4,9 @@
  */
 package Igu;
 
+import javax.swing.JOptionPane;
+import proyecto.aula.Usuario;
+
 /**
  *
  * @author Usuario
@@ -34,16 +37,22 @@ public class Pantalla extends javax.swing.JFrame {
         itemConsultarUsuario = new javax.swing.JMenuItem();
         itemEditarUsuario = new javax.swing.JMenuItem();
         itemEliminarUsuario = new javax.swing.JMenuItem();
+        subMenuReporteUsuarios = new javax.swing.JMenu();
+        itemTodosLosUsuarios1 = new javax.swing.JMenuItem();
+        itemBuscarUsuarioXTelefono = new javax.swing.JMenuItem();
+        itemBuscarServicioXValor1 = new javax.swing.JMenuItem();
+        itemBuscarServicioXEmail = new javax.swing.JMenuItem();
         MenuServicios = new javax.swing.JMenu();
         itemAgregarServicios = new javax.swing.JMenuItem();
         itemConsultarServicios = new javax.swing.JMenuItem();
         itemEditarServicios = new javax.swing.JMenuItem();
         itemEliminarServicios = new javax.swing.JMenuItem();
-        subMenuReporteServicios = new javax.swing.JMenu();
-        itemBuscarServicioXNombre = new javax.swing.JMenuItem();
-        itemBuscarServicioXValor = new javax.swing.JMenuItem();
         itemEliminarServicios1 = new javax.swing.JMenuItem();
         itemEditarServicios1 = new javax.swing.JMenuItem();
+        subMenuReporteServicios = new javax.swing.JMenu();
+        itemTodosLosUsuarios = new javax.swing.JMenuItem();
+        itemBuscarServicioXNombre = new javax.swing.JMenuItem();
+        itemBuscarServicioXValor = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem16 = new javax.swing.JMenuItem();
 
@@ -108,6 +117,42 @@ public class Pantalla extends javax.swing.JFrame {
         });
         menuUsuarios.add(itemEliminarUsuario);
 
+        subMenuReporteUsuarios.setText("Reportes");
+        subMenuReporteUsuarios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        itemTodosLosUsuarios1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemTodosLosUsuarios1.setText("Todos...");
+        itemTodosLosUsuarios1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemTodosLosUsuarios1ActionPerformed(evt);
+            }
+        });
+        subMenuReporteUsuarios.add(itemTodosLosUsuarios1);
+
+        itemBuscarUsuarioXTelefono.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemBuscarUsuarioXTelefono.setText("Por nombre...");
+        subMenuReporteUsuarios.add(itemBuscarUsuarioXTelefono);
+
+        itemBuscarServicioXValor1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemBuscarServicioXValor1.setText("Por telefono...");
+        itemBuscarServicioXValor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemBuscarServicioXValor1ActionPerformed(evt);
+            }
+        });
+        subMenuReporteUsuarios.add(itemBuscarServicioXValor1);
+
+        itemBuscarServicioXEmail.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemBuscarServicioXEmail.setText("Por email...");
+        itemBuscarServicioXEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemBuscarServicioXEmailActionPerformed(evt);
+            }
+        });
+        subMenuReporteUsuarios.add(itemBuscarServicioXEmail);
+
+        menuUsuarios.add(subMenuReporteUsuarios);
+
         barramenu.add(menuUsuarios);
 
         MenuServicios.setText("Servicios");
@@ -149,19 +194,6 @@ public class Pantalla extends javax.swing.JFrame {
         });
         MenuServicios.add(itemEliminarServicios);
 
-        subMenuReporteServicios.setText("Reportes");
-        subMenuReporteServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        itemBuscarServicioXNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemBuscarServicioXNombre.setText("Nombre...");
-        subMenuReporteServicios.add(itemBuscarServicioXNombre);
-
-        itemBuscarServicioXValor.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemBuscarServicioXValor.setText("Valor...");
-        subMenuReporteServicios.add(itemBuscarServicioXValor);
-
-        MenuServicios.add(subMenuReporteServicios);
-
         itemEliminarServicios1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         itemEliminarServicios1.setText("Eliminar servicios...");
         itemEliminarServicios1.addActionListener(new java.awt.event.ActionListener() {
@@ -179,6 +211,23 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         MenuServicios.add(itemEditarServicios1);
+
+        subMenuReporteServicios.setText("Reportes");
+        subMenuReporteServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        itemTodosLosUsuarios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemTodosLosUsuarios.setText("Todos...");
+        subMenuReporteServicios.add(itemTodosLosUsuarios);
+
+        itemBuscarServicioXNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemBuscarServicioXNombre.setText("Nombre...");
+        subMenuReporteServicios.add(itemBuscarServicioXNombre);
+
+        itemBuscarServicioXValor.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemBuscarServicioXValor.setText("Valor...");
+        subMenuReporteServicios.add(itemBuscarServicioXValor);
+
+        MenuServicios.add(subMenuReporteServicios);
 
         barramenu.add(MenuServicios);
 
@@ -257,6 +306,27 @@ public class Pantalla extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_itemEditarServicios1ActionPerformed
 
+    private void itemBuscarServicioXValor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarServicioXValor1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemBuscarServicioXValor1ActionPerformed
+
+    private void itemBuscarServicioXEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarServicioXEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemBuscarServicioXEmailActionPerformed
+
+    private void itemTodosLosUsuarios1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemTodosLosUsuarios1ActionPerformed
+     
+            if(Usuario.usuarioBD == null || Usuario.usuarioBD.isEmpty()){
+            JOptionPane.showMessageDialog(this, "No existen usuarios registrados"
+                   );
+        return;
+            }
+        VentanaReporteUsuarios ventana = new VentanaReporteUsuarios (this,true);
+        ventana.setLocationRelativeTo(this);
+        ventana.setVisible(true);
+
+    }//GEN-LAST:event_itemTodosLosUsuarios1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -297,8 +367,11 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JMenuBar barramenu;
     private javax.swing.JMenuItem itemAgregarServicios;
     private javax.swing.JMenuItem itemAgregarUsuario;
+    private javax.swing.JMenuItem itemBuscarServicioXEmail;
     private javax.swing.JMenuItem itemBuscarServicioXNombre;
     private javax.swing.JMenuItem itemBuscarServicioXValor;
+    private javax.swing.JMenuItem itemBuscarServicioXValor1;
+    private javax.swing.JMenuItem itemBuscarUsuarioXTelefono;
     private javax.swing.JMenuItem itemConsultarServicios;
     private javax.swing.JMenuItem itemConsultarUsuario;
     private javax.swing.JMenuItem itemEditarServicios;
@@ -308,10 +381,16 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemEliminarServicios1;
     private javax.swing.JMenuItem itemEliminarUsuario;
     private javax.swing.JMenuItem itemIniciarSesionUsuario;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel2;
+=======
+    private javax.swing.JMenuItem itemTodosLosUsuarios;
+    private javax.swing.JMenuItem itemTodosLosUsuarios1;
+>>>>>>> 2b7e384427284de2f3880dc04eed76aee5516906
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenu menuUsuarios;
     private javax.swing.JMenu subMenuReporteServicios;
+    private javax.swing.JMenu subMenuReporteUsuarios;
     // End of variables declaration//GEN-END:variables
 }
