@@ -26,6 +26,7 @@ public class Pantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         barramenu = new javax.swing.JMenuBar();
         menuUsuarios = new javax.swing.JMenu();
         itemIniciarSesionUsuario = new javax.swing.JMenuItem();
@@ -49,6 +50,9 @@ public class Pantalla extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("..:GESTION DE SERVICIOS:..");
         setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/FONDITO.png"))); // NOI18N
 
         menuUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/usuario24px.png"))); // NOI18N
         menuUsuarios.setText("Usuarios");
@@ -193,11 +197,11 @@ public class Pantalla extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 740, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 740, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 438, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 438, Short.MAX_VALUE)
         );
 
         pack();
@@ -304,6 +308,7 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemEliminarServicios1;
     private javax.swing.JMenuItem itemEliminarUsuario;
     private javax.swing.JMenuItem itemIniciarSesionUsuario;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenu menuUsuarios;
