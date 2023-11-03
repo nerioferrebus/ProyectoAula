@@ -21,6 +21,10 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         initComponents();
     }
 
+    PantallaUsuarios() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,15 +52,8 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         botonCancelar = new javax.swing.JButton();
         botonGuardar = new javax.swing.JButton();
-        botonBuscar = new javax.swing.JButton();
-        botonEditar = new javax.swing.JButton();
-        botonEliminar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
 
@@ -67,10 +64,10 @@ public class PantallaUsuarios extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("..: NUEVOS USUARIOS:..");
+        setForeground(new java.awt.Color(102, 0, 102));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Formulario para nuevos usuarios");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 394, -1));
 
@@ -122,10 +119,10 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jPanel1.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 221, 322, -1));
         jPanel1.add(campoClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 96, 322, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(246, 80, 450, 260));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 470, 260));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/usuario252px.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 195, 279));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 195, 279));
 
         botonCancelar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/cancelar48px.png"))); // NOI18N
@@ -145,58 +142,13 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         });
         getContentPane().add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 350, 55, -1));
 
-        botonBuscar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/buscar24px.png"))); // NOI18N
-        botonBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonBuscarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, 55, 56));
-
-        botonEditar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        botonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/edit24px.png"))); // NOI18N
-        botonEditar.setEnabled(false);
-        botonEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEditarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botonEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 55, 56));
-
-        botonEliminar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        botonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/delete-file-icon.png"))); // NOI18N
-        botonEliminar.setEnabled(false);
-        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEliminarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 55, -1));
-
         jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel10.setText("Guardar");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 410, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel11.setText("Buscar");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 410, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel12.setText("Editar");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, 60, -1));
-
-        jLabel13.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel13.setText("Eliminar");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 60, -1));
-
         jLabel14.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel14.setText("Salir");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 60, -1));
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/fondo.jpg"))); // NOI18N
-        jLabel15.setText("jLabel15");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 0, 1200, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -272,61 +224,6 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoCedulaActionPerformed
 
-    private void botonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarActionPerformed
-        //validamos que el campo cedula tenga algun dato
-        if(campoCedula.getText() == null || campoCedula.getText().isEmpty() ){
-            String msj = "Para editar primero debe buscar un usuario";
-            JOptionPane.showMessageDialog(this, msj);
-            limpiarCampos();
-            return;
-        }
-        
-        
-        //Obtenemos el usuario desde el diccionario apartir de la cedula 
-        Usuario u = Usuario.usuarioBD.get(campoCedula.getText());
-        //Obtenemos los nuevos datos ingresados desde el formulario
-        char[] clave = campoClave.getPassword();
-        String nombre = campoNombre.getText();
-        String email = campoEmail.getText();
-        String telefono = campoTelefono.getText();
-         //cambiarle los datos al usuario por los neuvos datos del formulario
-         u.cedula = String.valueOf(clave);
-         u.nombre = nombre;
-         u.email = email;
-         u.telefono = telefono;
-         //Guardamos el usuario con los nuevos datos
-         Usuario.usuarioBD.put (u.cedula, u);
-         //Mostramos mensaje
-         String msj = "Usuario modificado con Exito";
-            JOptionPane.showMessageDialog(this, msj);
-            
-        
-            
-            
-    }//GEN-LAST:event_botonEditarActionPerformed
-
-    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
-        //validamos que el campo cedula tenga algun dato
-       if(campoCedula.getText() == null || campoCedula.getText().isEmpty() ){
-            String msj = "Para editar primero debe buscar un usuario";
-            JOptionPane.showMessageDialog(this, msj);
-            limpiarCampos();
-            return;
-        }
-        //validar que la cedula en el formulario coincida con la cedula del usuario consultado previamente
-        
-        
-        String msj = "¿Seguro que desea eliminar este usuario?";
-        int respuesta = JOptionPane.showConfirmDialog(this, msj, "CONFIRMAR"
-        , JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if(respuesta == JOptionPane.YES_NO_OPTION){
-            Usuario.usuarioBD.remove(this.user.cedula);
-            int total = Usuario.usuarioBD.size();
-            String mjs2 = "Usuario eliminado con exito\nTOTAL: "+total;
-            JOptionPane.showMessageDialog(this , mjs2);
-        }
-    }//GEN-LAST:event_botonEliminarActionPerformed
-
     private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
         
         int opcion = JOptionPane.showConfirmDialog(this, "¿Desea cerrar?"
@@ -336,40 +233,6 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         }
         
     }//GEN-LAST:event_botonCancelarActionPerformed
-
-    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
-        //Recuperar la cedula de MAP
-
-        String cedula = campoCedula.getText();
-
-        //verioficamos si MAP esta vacio
-
-        if(Usuario.usuarioBD == null || Usuario.usuarioBD.isEmpty()){
-            String msj = "No existen usuarios en nuestro sistema";
-            JOptionPane.showMessageDialog(this, msj);
-
-        }else{
-            // buscamos el usuario en MAP a partir de la cedula o numero de documento
-            if(Usuario.usuarioBD.containsKey(cedula)){
-                user = Usuario.usuarioBD.get(cedula);
-                campoNombre.setText(user.cedula);
-                campoNombre.setText(user.nombre);
-                campoClave.setText(user.cedula);
-                campoEmail.setText(user.email);
-                campoTelefono.setText(user.telefono);
-                botonEditar.setEnabled(true);
-                botonEliminar.setEnabled(true);
-
-            }else{
-                String msj = "No existe un usuario con ese documento";
-                JOptionPane.showMessageDialog(this, msj);
-                limpiarCampos();
-
-            }
-
-        }
-
-    }//GEN-LAST:event_botonBuscarActionPerformed
 //(this,"¿Desea cerrar?"int opcion = JOptionPane.showConfirmDialog(this,"¿Desea cerrar?"
                // "OJO - CONFIRMAR", JOptionpane.);
                 
@@ -416,10 +279,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonBuscar;
     private javax.swing.JButton botonCancelar;
-    private javax.swing.JButton botonEditar;
-    private javax.swing.JButton botonEliminar;
     private javax.swing.JButton botonGuardar;
     private javax.swing.JTextField campoCedula;
     private javax.swing.JPasswordField campoClave;
@@ -428,11 +288,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     private javax.swing.JTextField campoTelefono;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

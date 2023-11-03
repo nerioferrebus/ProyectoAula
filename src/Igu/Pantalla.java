@@ -33,29 +33,14 @@ public class Pantalla extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         barramenu = new javax.swing.JMenuBar();
         menuUsuarios = new javax.swing.JMenu();
-        itemIniciarSesionUsuario = new javax.swing.JMenuItem();
         itemAgregarUsuario = new javax.swing.JMenuItem();
         itemConsultarUsuario = new javax.swing.JMenuItem();
         itemEditarUsuario = new javax.swing.JMenuItem();
-        itemEliminarUsuario = new javax.swing.JMenuItem();
         subMenuReporteUsuarios = new javax.swing.JMenu();
         itemTodosLosUsuarios1 = new javax.swing.JMenuItem();
         itemBuscarUsuarioXTelefono = new javax.swing.JMenuItem();
         itemBuscarServicioXValor1 = new javax.swing.JMenuItem();
         itemBuscarServicioXEmail = new javax.swing.JMenuItem();
-        MenuServicios = new javax.swing.JMenu();
-        itemAgregarServicios = new javax.swing.JMenuItem();
-        itemConsultarServicios = new javax.swing.JMenuItem();
-        itemEditarServicios = new javax.swing.JMenuItem();
-        itemEliminarServicios = new javax.swing.JMenuItem();
-        itemEliminarServicios1 = new javax.swing.JMenuItem();
-        itemEditarServicios1 = new javax.swing.JMenuItem();
-        subMenuReporteServicios = new javax.swing.JMenu();
-        itemTodosLosUsuarios = new javax.swing.JMenuItem();
-        itemBuscarServicioXNombre = new javax.swing.JMenuItem();
-        itemBuscarServicioXValor = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem16 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("..:GESTION DE SERVICIOS:..");
@@ -78,16 +63,6 @@ public class Pantalla extends javax.swing.JFrame {
         menuUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/usuario24px.png"))); // NOI18N
         menuUsuarios.setText("Usuarios");
         menuUsuarios.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-
-        itemIniciarSesionUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemIniciarSesionUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/login24px.png"))); // NOI18N
-        itemIniciarSesionUsuario.setText("Inicio de sesión...");
-        itemIniciarSesionUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemIniciarSesionUsuarioActionPerformed(evt);
-            }
-        });
-        menuUsuarios.add(itemIniciarSesionUsuario);
 
         itemAgregarUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         itemAgregarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/add24px.png"))); // NOI18N
@@ -118,16 +93,6 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         menuUsuarios.add(itemEditarUsuario);
-
-        itemEliminarUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemEliminarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/delete24px.png"))); // NOI18N
-        itemEliminarUsuario.setText("Eliminar mis datos..");
-        itemEliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemEliminarUsuarioActionPerformed(evt);
-            }
-        });
-        menuUsuarios.add(itemEliminarUsuario);
 
         subMenuReporteUsuarios.setText("Reportes");
         subMenuReporteUsuarios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -167,91 +132,6 @@ public class Pantalla extends javax.swing.JFrame {
 
         barramenu.add(menuUsuarios);
 
-        MenuServicios.setText("Servicios");
-        MenuServicios.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-
-        itemAgregarServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemAgregarServicios.setText("Agregar servicios..");
-        itemAgregarServicios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemAgregarServiciosActionPerformed(evt);
-            }
-        });
-        MenuServicios.add(itemAgregarServicios);
-
-        itemConsultarServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemConsultarServicios.setText("Consultar servicios..");
-        itemConsultarServicios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemConsultarServiciosActionPerformed(evt);
-            }
-        });
-        MenuServicios.add(itemConsultarServicios);
-
-        itemEditarServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemEditarServicios.setText("Editar servicios..");
-        itemEditarServicios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemEditarServiciosActionPerformed(evt);
-            }
-        });
-        MenuServicios.add(itemEditarServicios);
-
-        itemEliminarServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemEliminarServicios.setText("Eliminar servicios...");
-        itemEliminarServicios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemEliminarServiciosActionPerformed(evt);
-            }
-        });
-        MenuServicios.add(itemEliminarServicios);
-
-        itemEliminarServicios1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemEliminarServicios1.setText("Eliminar servicios...");
-        itemEliminarServicios1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemEliminarServicios1ActionPerformed(evt);
-            }
-        });
-        MenuServicios.add(itemEliminarServicios1);
-
-        itemEditarServicios1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemEditarServicios1.setText("Editar servicios..");
-        itemEditarServicios1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemEditarServicios1ActionPerformed(evt);
-            }
-        });
-        MenuServicios.add(itemEditarServicios1);
-
-        subMenuReporteServicios.setText("Reportes");
-        subMenuReporteServicios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        itemTodosLosUsuarios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemTodosLosUsuarios.setText("Todos...");
-        subMenuReporteServicios.add(itemTodosLosUsuarios);
-
-        itemBuscarServicioXNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemBuscarServicioXNombre.setText("Nombre...");
-        subMenuReporteServicios.add(itemBuscarServicioXNombre);
-
-        itemBuscarServicioXValor.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemBuscarServicioXValor.setText("Valor...");
-        subMenuReporteServicios.add(itemBuscarServicioXValor);
-
-        MenuServicios.add(subMenuReporteServicios);
-
-        barramenu.add(MenuServicios);
-
-        jMenu3.setText("Ayuda");
-        jMenu3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-
-        jMenuItem16.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem16.setText("Acerca de...");
-        jMenu3.add(jMenuItem16);
-
-        barramenu.add(jMenu3);
-
         setJMenuBar(barramenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -268,55 +148,17 @@ public class Pantalla extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void itemIniciarSesionUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemIniciarSesionUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemIniciarSesionUsuarioActionPerformed
-
     private void itemAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAgregarUsuarioActionPerformed
-    PantallaUsuarios pantalla = new PantallaUsuarios (this,true);   
-    pantalla.setLocationRelativeTo(this);
-    pantalla.setVisible(true);
+    PantallaUsuarios dialog = new PantallaUsuarios(this, true); 
+
+   dialog.setVisible(true);
     }//GEN-LAST:event_itemAgregarUsuarioActionPerformed
 
     private void itemConsultarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarUsuarioActionPerformed
 
-       PantallaBusqueda pantalla2 = new PantallaBusqueda();
-       pantalla2.setLocationRelativeTo(this);
-       pantalla2.setVisible(true);
+      
           
     }//GEN-LAST:event_itemConsultarUsuarioActionPerformed
-
-    private void itemEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemEditarUsuarioActionPerformed
-
-    private void itemEliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemEliminarUsuarioActionPerformed
-
-    private void itemAgregarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAgregarServiciosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemAgregarServiciosActionPerformed
-
-    private void itemConsultarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarServiciosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemConsultarServiciosActionPerformed
-
-    private void itemEditarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarServiciosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemEditarServiciosActionPerformed
-
-    private void itemEliminarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarServiciosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemEliminarServiciosActionPerformed
-
-    private void itemEliminarServicios1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarServicios1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemEliminarServicios1ActionPerformed
-
-    private void itemEditarServicios1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarServicios1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemEditarServicios1ActionPerformed
 
     private void itemBuscarServicioXValor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarServicioXValor1ActionPerformed
         // TODO add your handling code here:
@@ -338,6 +180,10 @@ public class Pantalla extends javax.swing.JFrame {
         ventana.setVisible(true);
 
     }//GEN-LAST:event_itemTodosLosUsuarios1ActionPerformed
+
+    private void itemEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemEditarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -375,32 +221,17 @@ public class Pantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu MenuServicios;
     private javax.swing.JMenuBar barramenu;
-    private javax.swing.JMenuItem itemAgregarServicios;
     private javax.swing.JMenuItem itemAgregarUsuario;
     private javax.swing.JMenuItem itemBuscarServicioXEmail;
-    private javax.swing.JMenuItem itemBuscarServicioXNombre;
-    private javax.swing.JMenuItem itemBuscarServicioXValor;
     private javax.swing.JMenuItem itemBuscarServicioXValor1;
     private javax.swing.JMenuItem itemBuscarUsuarioXTelefono;
-    private javax.swing.JMenuItem itemConsultarServicios;
     private javax.swing.JMenuItem itemConsultarUsuario;
-    private javax.swing.JMenuItem itemEditarServicios;
-    private javax.swing.JMenuItem itemEditarServicios1;
     private javax.swing.JMenuItem itemEditarUsuario;
-    private javax.swing.JMenuItem itemEliminarServicios;
-    private javax.swing.JMenuItem itemEliminarServicios1;
-    private javax.swing.JMenuItem itemEliminarUsuario;
-    private javax.swing.JMenuItem itemIniciarSesionUsuario;
-    private javax.swing.JMenuItem itemTodosLosUsuarios;
     private javax.swing.JMenuItem itemTodosLosUsuarios1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu menuUsuarios;
-    private javax.swing.JMenu subMenuReporteServicios;
     private javax.swing.JMenu subMenuReporteUsuarios;
     // End of variables declaration//GEN-END:variables
 }
