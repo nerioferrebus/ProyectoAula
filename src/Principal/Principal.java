@@ -1,18 +1,19 @@
 
 package Principal;
 
-import Igu.Pantalla;
+import Igu.inicio;
 
 public class Principal {
    
     
     
     public static void main(String[] args) {
-        Pantalla pantalla = new Pantalla();
+        inicio Inicio = new inicio();
+       
+        
     //pantalla.setLocationRelativeTo(pantalla);
-                                        
-    pantalla.setExtendedState(Pantalla.MAXIMIZED_BOTH);
-    pantalla.setVisible(true);
+    Inicio.setVisible(true);                                    
+    
     
     }
 }
