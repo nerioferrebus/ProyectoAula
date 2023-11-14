@@ -4,19 +4,23 @@
  */
 package Igu;
 
+
+
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import proyecto.aula.Usuario;
+
 
 /**
  *
  * @author Usuario
  */
 public class Pantalla extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Pantalla
-     */
+   
+  
     public Pantalla() {
+        
+        
         initComponents();
     }
 
@@ -30,6 +34,10 @@ public class Pantalla extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         barramenu = new javax.swing.JMenuBar();
         menuUsuarios = new javax.swing.JMenu();
@@ -46,18 +54,64 @@ public class Pantalla extends javax.swing.JFrame {
         setTitle("..:GESTION DE SERVICIOS:..");
         setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/FONDITO.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/usuario252px.png"))); // NOI18N
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/report256px.png"))); // NOI18N
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("Reportes de usuarios");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2.setText("Agregar usuario");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/FONDO.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 740, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(980, 980, 980)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(990, 990, 990)
+                .addComponent(jLabel3))
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1390, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 450, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jButton1))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(420, 420, 420)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(jLabel3))
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         menuUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/usuario24px.png"))); // NOI18N
@@ -65,7 +119,7 @@ public class Pantalla extends javax.swing.JFrame {
         menuUsuarios.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
         itemAgregarUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        itemAgregarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/add24px.png"))); // NOI18N
+        itemAgregarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/add24px.png"))); // NOI18N
         itemAgregarUsuario.setText("Agregar usuario..");
         itemAgregarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,42 +202,57 @@ public class Pantalla extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void itemAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAgregarUsuarioActionPerformed
-    PantallaUsuarios dialog = new PantallaUsuarios(this, true); 
-
-   dialog.setVisible(true);
-    }//GEN-LAST:event_itemAgregarUsuarioActionPerformed
-
-    private void itemConsultarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarUsuarioActionPerformed
-
-      
-          
-    }//GEN-LAST:event_itemConsultarUsuarioActionPerformed
+    private void itemBuscarServicioXEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarServicioXEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemBuscarServicioXEmailActionPerformed
 
     private void itemBuscarServicioXValor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarServicioXValor1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_itemBuscarServicioXValor1ActionPerformed
 
-    private void itemBuscarServicioXEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarServicioXEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemBuscarServicioXEmailActionPerformed
-
     private void itemTodosLosUsuarios1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemTodosLosUsuarios1ActionPerformed
-     
-            if(Usuario.usuarioBD == null || Usuario.usuarioBD.isEmpty()){
+
+        if(Usuario.usuarioBD == null || Usuario.usuarioBD.isEmpty()){
             JOptionPane.showMessageDialog(this, "No existen usuarios registrados"
-                   );
-        return;
-            }
+            );
+            return;
+        }
         VentanaReporteUsuarios ventana = new VentanaReporteUsuarios (this,true);
         ventana.setLocationRelativeTo(this);
         ventana.setVisible(true);
-
     }//GEN-LAST:event_itemTodosLosUsuarios1ActionPerformed
 
     private void itemEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_itemEditarUsuarioActionPerformed
+
+    private void itemConsultarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarUsuarioActionPerformed
+
+    }//GEN-LAST:event_itemConsultarUsuarioActionPerformed
+
+    private void itemAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAgregarUsuarioActionPerformed
+        PantallaUsuarios dialog = new PantallaUsuarios(this, true);
+
+        dialog.setVisible(true);
+    }//GEN-LAST:event_itemAgregarUsuarioActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       PantallaUsuarios dialog = new PantallaUsuarios(this, true);
+
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        if(Usuario.usuarioBD == null || Usuario.usuarioBD.isEmpty()){
+            JOptionPane.showMessageDialog(this, "No existen usuarios registrados"
+            );
+            return;
+        }
+        VentanaReporteUsuarios ventana = new VentanaReporteUsuarios (this,true);
+        ventana.setLocationRelativeTo(this);
+        ventana.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -214,7 +283,9 @@ public class Pantalla extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
+                
                 new Pantalla().setVisible(true);
             }
         });
@@ -229,9 +300,19 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemConsultarUsuario;
     private javax.swing.JMenuItem itemEditarUsuario;
     private javax.swing.JMenuItem itemTodosLosUsuarios1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu menuUsuarios;
     private javax.swing.JMenu subMenuReporteUsuarios;
     // End of variables declaration//GEN-END:variables
+    
+  
+    
+    
+   
+    
 }
