@@ -72,8 +72,8 @@ public class inicio extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 23, 260, -1));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/fondo1.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -2, 500, 270));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/Fondo-init.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -2, 490, 260));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

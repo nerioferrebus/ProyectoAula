@@ -54,6 +54,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         botonGuardar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
 
@@ -67,16 +68,17 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         setForeground(new java.awt.Color(102, 0, 102));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Formulario para nuevos usuarios");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 394, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 394, -1));
 
-        jPanel1.setBackground(new java.awt.Color(51, 0, 102));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true), "Datos del Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
-        jPanel1.setForeground(new java.awt.Color(0, 102, 102));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), "Datos del Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 18), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("CEDULA");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 45, 85, 24));
 
@@ -88,15 +90,18 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jPanel1.add(campoCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 45, 322, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("PASSWORD");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 95, 85, 24));
         jPanel1.add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 137, 322, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("NOMBRE");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 137, 85, 24));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("EMAIL");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 179, 85, 24));
 
@@ -108,6 +113,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 179, 322, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("TELEFONO");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 221, 85, 24));
 
@@ -119,10 +125,10 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jPanel1.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 221, 322, -1));
         jPanel1.add(campoClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 96, 322, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 470, 260));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 470, 260));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/usuario252px.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 195, 279));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 195, 279));
 
         botonCancelar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/cancelar48px.png"))); // NOI18N
@@ -131,7 +137,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
                 botonCancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(botonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 57, -1));
+        getContentPane().add(botonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 57, -1));
 
         botonGuardar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/guardar48px.png.png"))); // NOI18N
@@ -140,15 +146,21 @@ public class PantallaUsuarios extends javax.swing.JDialog {
                 botonGuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 350, 55, -1));
+        getContentPane().add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, 55, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Guardar");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 410, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Salir");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 60, -1));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 50, -1));
+
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/Fondo-Usuario.png"))); // NOI18N
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -288,6 +300,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     private javax.swing.JTextField campoTelefono;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
