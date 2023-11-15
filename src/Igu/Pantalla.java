@@ -244,11 +244,8 @@ public class Pantalla extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        PantallaUsuarios dialog = new PantallaUsuarios(this, true);
-<<<<<<< HEAD
-        dialog.setLocationRelativeTo(this);    
-=======
 
->>>>>>> 5164278171706d897dee298b67693acca862e284
+        dialog.setLocationRelativeTo(this);
         dialog.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
