@@ -8,14 +8,14 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author jesus
+ * @author ZONA DIGITAL
  */
-public class inicio extends javax.swing.JFrame {
+public class Inicio1 extends javax.swing.JFrame {
 
     /**
-     * Creates new form inicio
+     * Creates new form Inicio1
      */
-    public inicio() {
+    public Inicio1() {
         initComponents();
     }
 
@@ -28,55 +28,61 @@ public class inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        user = new javax.swing.JLabel();
-        pwrd = new javax.swing.JLabel();
-        txtuser = new javax.swing.JTextField();
-        txtpass = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        txtuser = new javax.swing.JTextField();
+        txtpass = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        user.setBackground(new java.awt.Color(255, 255, 255));
-        user.setForeground(new java.awt.Color(255, 255, 255));
-        user.setText("Usuario:");
-        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 91, 69, 24));
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel1.setText("Nombre:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 65, -1, -1));
 
-        pwrd.setBackground(new java.awt.Color(255, 255, 255));
-        pwrd.setForeground(new java.awt.Color(255, 255, 255));
-        pwrd.setText("Contraseña:");
-        getContentPane().add(pwrd, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 144, 69, 22));
-        getContentPane().add(txtuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 91, 183, -1));
-        getContentPane().add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 144, 183, -1));
+        jLabel2.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel2.setText("Contraseña:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 124, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Ingresar");
+        jButton1.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jButton1.setText("Iniciar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 211, -1, 31));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 184, 110, 32));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/usuario128px.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 73, 103, -1));
+        txtuser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtuserActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 61, 168, -1));
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Inicio Sesion personal hotel");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 23, 260, -1));
+        txtpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpassActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 121, 168, -1));
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/fondo1.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -2, 500, 270));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/usuario128px.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 49, 112, -1));
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/Fondo-init.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtuserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtuserActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String usuario = txtuser.getText();
@@ -95,6 +101,10 @@ public class inicio extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void txtpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtpassActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -112,21 +122,20 @@ public class inicio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
-                new inicio().setVisible(true);
+                new Inicio1().setVisible(true);
             }
         });
     }
@@ -136,9 +145,8 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel pwrd;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField txtpass;
     private javax.swing.JTextField txtuser;
-    private javax.swing.JLabel user;
     // End of variables declaration//GEN-END:variables
 }

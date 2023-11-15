@@ -75,10 +75,16 @@ public class VentanaReporteUsuarios extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaUsuarios = new javax.swing.JTable();
+<<<<<<< HEAD
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         respuesta = new javax.swing.JLabel();
+=======
+        jLabel3 = new javax.swing.JLabel();
+        txtTotal = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("**Gestion de Usuarios**");
@@ -87,15 +93,19 @@ public class VentanaReporteUsuarios extends javax.swing.JDialog {
                 formWindowOpened(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/report256px.png"))); // NOI18N
         jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 260, 320));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Reporte de Usuarios");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(286, 17, 423, -1));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 255), 2), "Datos de los usuarios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 16), new java.awt.Color(102, 0, 204))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Datos de los usuarios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 16), new java.awt.Color(0, 0, 0))); // NOI18N
 
         tablaUsuarios.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         tablaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
@@ -139,6 +149,7 @@ public class VentanaReporteUsuarios extends javax.swing.JDialog {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
+<<<<<<< HEAD
         jButton1.setText("BUSCAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,6 +222,24 @@ public class VentanaReporteUsuarios extends javax.swing.JDialog {
                 .addComponent(respuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
+=======
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 87, -1, -1));
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("TOTAL:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 466, -1, -1));
+
+        txtTotal.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtTotal.setForeground(new java.awt.Color(255, 255, 255));
+        txtTotal.setText("0");
+        getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 466, 79, -1));
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/Fondo-Reportes.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 490));
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -413,6 +442,11 @@ public class VentanaReporteUsuarios extends javax.swing.JDialog {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+<<<<<<< HEAD
+=======
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel respuesta;
