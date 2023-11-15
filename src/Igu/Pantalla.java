@@ -52,6 +52,7 @@ public class Pantalla extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("..:GESTION DE SERVICIOS:..");
+        setBackground(new java.awt.Color(0, 0, 0));
         setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/usuario252px.png"))); // NOI18N
@@ -114,6 +115,11 @@ public class Pantalla extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        barramenu.setBackground(new java.awt.Color(0, 0, 0));
+        barramenu.setForeground(new java.awt.Color(0, 0, 0));
+
+        menuUsuarios.setBackground(new java.awt.Color(0, 0, 0));
+        menuUsuarios.setForeground(new java.awt.Color(255, 255, 255));
         menuUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/usuario24px.png"))); // NOI18N
         menuUsuarios.setText("Usuarios");
         menuUsuarios.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -238,7 +244,11 @@ public class Pantalla extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        PantallaUsuarios dialog = new PantallaUsuarios(this, true);
+<<<<<<< HEAD
+        dialog.setLocationRelativeTo(this);    
+=======
 
+>>>>>>> 5164278171706d897dee298b67693acca862e284
         dialog.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
