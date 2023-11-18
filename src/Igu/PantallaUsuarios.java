@@ -3,9 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
 package Igu;
+
 import java.util.*;
 import javax.swing.JOptionPane;
 import proyecto.aula.Usuario;
+import java.sql.*;
+import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
 
 /**
  *
@@ -19,6 +25,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     public PantallaUsuarios(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     PantallaUsuarios() {
@@ -42,19 +49,25 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         campoCedula = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        campoNombre = new javax.swing.JTextField();
+        campoEmail = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        campoEmail = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
         campoTelefono = new javax.swing.JTextField();
-        campoClave = new javax.swing.JPasswordField();
+        jLabel9 = new javax.swing.JLabel();
+        campoFecha = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        campoHabitacion = new javax.swing.JTextField();
+        campoNombre = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         botonCancelar = new javax.swing.JButton();
         botonGuardar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+<<<<<<< HEAD
+        respuesta = new javax.swing.JLabel();
+=======
         jLabel11 = new javax.swing.JLabel();
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
 
         jLabel4.setText("jLabel4");
 
@@ -87,15 +100,28 @@ public class PantallaUsuarios extends javax.swing.JDialog {
                 campoCedulaActionPerformed(evt);
             }
         });
-        jPanel1.add(campoCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 45, 322, -1));
+        jPanel1.add(campoCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 322, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+<<<<<<< HEAD
+        jLabel5.setText("NOMBRE");
+=======
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("PASSWORD");
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 95, 85, 24));
-        jPanel1.add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 137, 322, -1));
+        jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 137, 322, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+<<<<<<< HEAD
+        jLabel7.setText("EMAIL");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 137, 85, 24));
+
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel8.setText("TELEFONO");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 179, 85, 24));
+
+=======
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("NOMBRE");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 137, 85, 24));
@@ -117,15 +143,36 @@ public class PantallaUsuarios extends javax.swing.JDialog {
         jLabel9.setText("TELEFONO");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 221, 85, 24));
 
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
         campoTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoTelefonoActionPerformed(evt);
             }
         });
-        jPanel1.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 221, 322, -1));
-        jPanel1.add(campoClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 96, 322, -1));
+        jPanel1.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 179, 322, -1));
 
+<<<<<<< HEAD
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel9.setText("FECHA");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 221, 85, 24));
+
+        campoFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoFechaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(campoFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 330, -1));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setText("HABITACION");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 100, 30));
+        jPanel1.add(campoHabitacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 330, -1));
+        jPanel1.add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 320, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 530, 320));
+=======
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 470, 260));
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/usuario252px.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 195, 279));
@@ -137,7 +184,11 @@ public class PantallaUsuarios extends javax.swing.JDialog {
                 botonCancelarActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+        getContentPane().add(botonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 57, -1));
+=======
         getContentPane().add(botonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 57, -1));
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
 
         botonGuardar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/iconos/guardar48px.png.png"))); // NOI18N
@@ -146,89 +197,92 @@ public class PantallaUsuarios extends javax.swing.JDialog {
                 botonGuardarActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+        getContentPane().add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 420, 55, -1));
+=======
         getContentPane().add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, 55, -1));
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Guardar");
+<<<<<<< HEAD
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 480, -1, -1));
+=======
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, -1, -1));
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
 
         jLabel14.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Salir");
+<<<<<<< HEAD
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, 60, -1));
+        getContentPane().add(respuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 150, 30));
+=======
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 50, -1));
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Igu/Iconos/Fondo-Usuario.png"))); // NOI18N
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 450));
+>>>>>>> a712dec1367ed427cd199c00c779f06e69b39603
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void campoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoEmailActionPerformed
 
     private void campoTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTelefonoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoTelefonoActionPerformed
 
+    private void campoFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoFechaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoFechaActionPerformed
+
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
-       //recuperar los datos ingresados en los campos de el formulario
-      
-      String cedula = campoCedula.getText();
-      char[] clave = campoClave.getPassword();
-      String nombre = campoNombre.getText();
-      String email = campoEmail.getText();
-      String telefono = campoTelefono.getText();
-        //creamos un objeto variable de tipo usuario
-        
-        Usuario user = new Usuario();
-        user.cedula = cedula;
-        String clave2 = String.valueOf(clave);
-        user.cedula = clave2;
-        user.nombre = nombre;
-        user.email = email;
-        user.telefono = telefono;
-        
-        //validar si ya MAP existe
-        
-        if(Usuario.usuarioBD == null){
-            Usuario.usuarioBD = new HashMap<String, Usuario>();
-      
-        }
-        //validar si MAP ya tiene el usuario guardado
-        
-        if(Usuario.usuarioBD.containsKey(cedula)){
-            String msj = "Ya existe un usuario con este documento\n" + cedula;
-            JOptionPane.showMessageDialog(this, msj);
-       
-       }
-        else{
-            //obtenemos el numero de usuarios en MAP en caso de que ya existan
-          Usuario.usuarioBD.put(cedula, user);
-        int contarUsuarios = Usuario.usuarioBD.size();
-        String msj = "Este usuario fue guardado con exito\n"
-                + "Existen " + contarUsuarios + " Usuarios";
-                    JOptionPane.showMessageDialog(this, msj);
-                    limpiarCampos();
-   
+        try {
             
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/bd_usuarios", "root", "");
+            PreparedStatement pst = cn.prepareStatement("insert into clientes values(?,?,?,?,?,?,?)");
+
+            pst.setString(1, "0");
+            pst.setString(2, campoCedula.getText().trim());
+            pst.setString(3, campoNombre.getText().trim());
+            pst.setString(4, campoEmail.getText().trim());
+            pst.setString(5, campoTelefono.getText().trim());
+            pst.setString(6, campoFecha.getText().trim());
+            pst.setString(7, campoHabitacion.getText().trim());
+            pst.executeUpdate();
+            
+            campoCedula.setText("");
+            campoNombre.setText("");
+            campoEmail.setText("");
+            campoTelefono.setText("");
+            campoFecha.setText("");
+            campoHabitacion.setText("");
+            
+            respuesta.setText("USUARIO INGRESADO");
+
+            Timer timer = new Timer(2000, new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    respuesta.setText("");
+                }
+            });
+            timer.setRepeats(false);
+            timer.start();
+
+        } catch (Exception e) {
+
         }
-       
-        //guardamos el usuario en MAP
-        
-        
 
     }//GEN-LAST:event_botonGuardarActionPerformed
 
     public void limpiarCampos(){
     
         campoCedula.setText("");
-        campoNombre.setText("");
-        campoClave.setText("");
         campoEmail.setText("");
+        campoNombre.setText("");
         campoTelefono.setText("");
+        campoFecha.setText("");
+        campoHabitacion.setText("");
         
     }
     
@@ -294,8 +348,9 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     private javax.swing.JButton botonCancelar;
     private javax.swing.JButton botonGuardar;
     private javax.swing.JTextField campoCedula;
-    private javax.swing.JPasswordField campoClave;
     private javax.swing.JTextField campoEmail;
+    private javax.swing.JTextField campoFecha;
+    private javax.swing.JTextField campoHabitacion;
     private javax.swing.JTextField campoNombre;
     private javax.swing.JTextField campoTelefono;
     private javax.swing.JLabel jLabel1;
@@ -312,6 +367,7 @@ public class PantallaUsuarios extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel respuesta;
     // End of variables declaration//GEN-END:variables
 
     void setExtendedState(int MAXIMIZED_BOTH) {

@@ -12,10 +12,11 @@ import java.util.ArrayList;
  */
 public class Usuario {
     public String cedula;
-    public String clave;
     public String nombre;
     public String email;
     public String telefono;
+    public String fecha;
+    public String habitacion;
     public ArrayList<Servicio>listadeservicios;
     public static HashMap<String,Usuario> usuarioBD;
     

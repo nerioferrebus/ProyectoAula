@@ -5,7 +5,15 @@
 package Igu;
 
 
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import proyecto.aula.Usuario;
@@ -250,15 +258,12 @@ public class Pantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-        if(Usuario.usuarioBD == null || Usuario.usuarioBD.isEmpty()){
-            JOptionPane.showMessageDialog(this, "No existen usuarios registrados"
-            );
-            return;
-        }
+               
         VentanaReporteUsuarios ventana = new VentanaReporteUsuarios (this,true);
         ventana.setLocationRelativeTo(this);
-        ventana.setVisible(true);
+        ventana.setVisible(true);        
+        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
