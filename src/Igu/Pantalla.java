@@ -231,7 +231,8 @@ public class Pantalla extends javax.swing.JFrame {
             );
             return;
         }
-        VentanaReporteUsuarios ventana = new VentanaReporteUsuarios (this,true);
+        VentanaReportesUsuarios ventana = new VentanaReportesUsuarios
+        ();
         ventana.setLocationRelativeTo(this);
         ventana.setVisible(true);
     }//GEN-LAST:event_itemTodosLosUsuarios1ActionPerformed
@@ -245,16 +246,17 @@ public class Pantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_itemConsultarUsuarioActionPerformed
 
     private void itemAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAgregarUsuarioActionPerformed
-        PantallaUsuarios dialog = new PantallaUsuarios(this, true);
+        PantallaUsuarios1 dialog = new PantallaUsuarios1();
+                
 
         dialog.setVisible(true);
     }//GEN-LAST:event_itemAgregarUsuarioActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       PantallaUsuarios dialog = new PantallaUsuarios(this, true);
+       PantallaUsuarios1 dialogo = new PantallaUsuarios1();
 
-        dialog.setLocationRelativeTo(this);
-        dialog.setVisible(true);
+        dialogo.setLocationRelativeTo(this);
+        dialogo.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
